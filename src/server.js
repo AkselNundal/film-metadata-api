@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = 8000;
 
 const movieRoutes = require('./routes/movieRoutes')
 
 app.get('/', (req, res) => {
-    res.send('Welcome horror fans!');
+    res.json({
+        title: 'welcome',
+        genre: 'horror'
+    });
 });
 
 app.use('/movies', movieRoutes);
