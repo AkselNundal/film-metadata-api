@@ -1,8 +1,9 @@
 const express = require('express');
+const payload = require('../data/movies.json')
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send('movie list');
+    res.json(payload);
 });
 
 module.exports = router;
