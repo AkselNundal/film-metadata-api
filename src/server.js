@@ -1,11 +1,16 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+const PORT = 3000;
 
-app.get('/home', (req, res) => {
-    res.send('I love horror films!');
+const movieRoutes = require('./routes/movieRoutes')
+
+app.get('/', (req, res) => {
+    res.send('Welcome horror fans!');
 });
 
-app.listen(port, () => {
-    console.log(`listening on https://localhost:${port}`);
+app.use('/movies', movieRoutes);
+
+// starting server
+app.listen(PORT, () => {
+    console.log(`listening on http://localhost:${PORT}`);
 });
