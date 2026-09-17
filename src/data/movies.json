@@ -1,0 +1,14 @@
+[
+    {
+        "movie_title": "Obsession",
+        "release_year": 2025,
+        "runtime_minutes": 89,
+        "genre": "horror"
+    },
+    {
+        "movie_title": "Halloween",
+        "release_year": 1984,
+        "runtime_minutes": 76,
+        "genre": "slasher"
+    }
+]
