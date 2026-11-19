@@ -3,6 +3,7 @@ const app = express();
 const PORT = 8000;
 
 const movieRoutes = require('./routes/movieRoutes')
+const genreRoutes = require('./routes/genreRoutes')
 
 app.get('/', (req, res) => {
     res.json({
@@ -12,6 +13,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/movies', movieRoutes);
+app.use('/genres', genreRoutes);
+
 
 // starting server
 app.listen(PORT, () => {
